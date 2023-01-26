@@ -66,10 +66,13 @@ def inv_mix_columns(s):
     return s # TODO :p
 
 def bytes2matrix(text):
-    return None # TODO :p
+    """ Converts a 16-byte array into a 4x4 matrix.  """
+    assert len(text)==16
+    return [list(text[i:i+4]) for i in range(0, len(text), 4)]
 
 def matrix2bytes(matrix):
-    return None # TODO :p
+    """ Converts a 4x4 matrix into a 16-byte array.  """
+    return bytes(sum(matrix, []))
 
 def xor_bytes(a, b):
     return None # TODO :p
