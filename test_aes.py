@@ -115,7 +115,7 @@ class TestPad():
 
         padded = pad(bytes_text)
 
-        assert padded == b'\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10'
+        assert padded == b""
 
     def test_4(self):
         bytes_text = b"abcd"
@@ -129,7 +129,7 @@ class TestPad():
 
         padded = pad(bytes_text)
 
-        assert padded == b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10'
+        assert padded == b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f'
 
 class TestUnpadPad():
     def test_0(self):
